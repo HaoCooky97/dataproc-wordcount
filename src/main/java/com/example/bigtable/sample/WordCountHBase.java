@@ -52,7 +52,7 @@ public class WordCountHBase {
 		Text outputKey = new Text(word.toUpperCase().trim());
 		//khởi tạo biến lưu giá trị của key out put
 		IntWritable outputValue = new IntWritable(1);
-		//kiểm tra xem số trên phải số nguyên tố hay không
+		//kiểm tra xem chiều dài từ có trên 4 không
 		//nếu đúng thì ghi vào cập giá trị <key,value>
 		if(word.length()>=4){
 		con.write(outputKey, outputValue);
